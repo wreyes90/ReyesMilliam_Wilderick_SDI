@@ -13,3 +13,4 @@ manufacturingYear = 1998;           //Definition of number variable
 //Console Assignment
 
 console.log(carMakeAndModel);      //String variable console
+console.log(isTheCarColorYellow)   //Boolean variable console
