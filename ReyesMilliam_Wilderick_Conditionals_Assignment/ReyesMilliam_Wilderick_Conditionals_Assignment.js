@@ -8,29 +8,33 @@
 
 var gallonsInTank = prompt ("Input the amount of gallons in gas tank:");
 var mpg = prompt ("Enter the approximate MPG economy of the vehicle:");
-var distance = false; prompt ("Input the distance you are driving in miles:"); // here is the doubt< I can not store the value the user enters here and use it on a new prompt or on the console
-distance = confirm("Is the distance in miles? Ok for yes, cancel for no");
+var distance = prompt ("Input the distance you are driving in miles:");
+dist = confirm("Is the distance in miles? Ok for yes, cancel for no");
 var range = (gallonsInTank * mpg);
 
-    if (distance === true) {
+    if (dist === true) {
 
     console.log("You have a range of " + range + " miles!");
 
+        var tripPossible = false;
+        tripPossible = confirm ("is " + range + " grater than " + distance);
+
+        if (tripPossible === true) {
+
+            console.log ("Your range is " + range + " miles; for a total distance of " + distance + " miles trip is possible. Have a safe drive!")
+
+
+        }
+
+        else {
+            console.log ("Your range is only " + range + " miles; for a total distance of " + distance + " miles. Trip is not possible. Please refuel!")
+        }
     }
     else {
     console.log("please try again and provided distance in miles.")
     }
 
-var tripPossible = false;
-tripPossible = confirm ("is " + range + " grater than " + distance);
 
-        if (tripPossible === true) {
-    console.log ("Your range is " + range + " miles; for a total distance of " + distance + " miles trip is possible. Have a safe drive!")
-        }
-
-        else {
-    console.log ("Your range is only " + range + " miles; for a total distance of " + distance + " miles trip is not possible. Please refuel!")
-        }
 
 var convertToKM = false;
 convertToKM = confirm ("would you like to convert range and distance to Kilometers?")
