@@ -2,14 +2,33 @@
  * Created by wilderickreyes on 6/17/15.
  */
 // Wilderick A. Reyes Milliam
-// Miles Per Gallon Calculator
+// Range calculator
 
 // Assign variables
 
-var gallonsInTank = prompt ("Input the amount of gallons in gas tank:");
-var mpg = prompt ("Enter the approximate MPG economy of the vehicle:");
-var distance = prompt ("Input the distance you are driving in miles:");
+var gallonsInTank = prompt ("Input the amount of gallons in gas tank:"); 
+galInTank = confirm ("Is the ammount in entered in gallons? Ok for Yes Cancel for No.");
+if (galInTank === true) {
+
+    var mpg = prompt("Enter the approximate MPG economy of the vehicle:");
+}
+
+else {
+    alert("Please provide amount in gallons");
+}
+
+    mpg1 = confirm ("Is MPG estimated combined; City and Highway? Ok for Yes cancel for No");
+    if (mpg1 === true) {
+    var distance = prompt("Input the distance you are driving in miles:");
+    }
+
+    else {
+    alert("Provide correct MPG estimate")
+    }
+
+
 dist = confirm("Is the distance in miles? Ok for yes, cancel for no");
+
 var range = (gallonsInTank * mpg);
 
     if (dist === true) {
@@ -37,12 +56,12 @@ var range = (gallonsInTank * mpg);
 
 
 var convertToKM = false;
-convertToKM = confirm ("would you like to convert range and distance to Kilometers?")
+convertToKM = confirm ("Would you like to convert range and distance to Kilometers?")
 
 
 if (convertToKM === true) {
-    var convertedRange = range / 0.62137
-    var convertedDist = distance / 0.62137
+    var convertedRange = range / 0.62137;
+    var convertedDist = distance / 0.62137;
     console.log("Your range in Kilometers is: " + convertedRange + " KM and your converted distance is: " + convertedDist + " KM")
 
 }
