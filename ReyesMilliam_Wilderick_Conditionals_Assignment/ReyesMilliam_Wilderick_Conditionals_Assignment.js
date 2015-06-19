@@ -23,7 +23,7 @@ else {
     }
 
     else {
-    alert("Provide correct MPG estimate") // Message if confirmation is false
+    alert("Provide correct MPG estimate"); // Message if confirmation is false
     }
 
 
@@ -39,13 +39,13 @@ var range = (gallonsInTank * mpg); // Variable used to calculate range
         // Boolean operator for possibility of trip
         if (tripPossible === true) {
 
-            console.log ("Your range is " + range + " miles; for a total distance of " + distance + " miles trip is possible. Have a safe drive!") // Assigned to the console if trip possible is true
+            console.log ("Your range is " + range + " miles; for a total distance of " + distance + " miles trip is possible. Have a safe drive!"); // Assigned to the console if trip possible is true
 
 
         }
 
         else {
-            console.log ("Your range is only " + range + " miles; for a total distance of " + distance + " miles. Trip is not possible. Please refuel!") // Assigned to the console if the trip is not possible
+            console.log ("Your range is only " + range + " miles; for a total distance of " + distance + " miles. Trip is not possible. Please refuel!"); // Assigned to the console if the trip is not possible
         }
     }
     else {
@@ -61,7 +61,7 @@ convertToKM = confirm ("Would you like to convert range and distance to Kilomete
 if (convertToKM === true) {
     var convertedRange = range / 0.62137; // variable to convert range
     var convertedDist = distance / 0.62137; // variable to convert distance
-    console.log("Your range in Kilometers is: " + convertedRange + " KM and your converted distance is: " + convertedDist + " KM") // Assigned to the console the result of the conversion
+    console.log("Your range in Kilometers is: " + convertedRange + " KM and your converted distance is: " + convertedDist + " KM"); // Assigned to the console the result of the conversion
 
 }
 
