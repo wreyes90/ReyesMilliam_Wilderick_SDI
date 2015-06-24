@@ -5,22 +5,28 @@
 
 //variables
 var chooseLottery = prompt ("Please: Choose between:\nFlorida Lottery or Power Ball"); // Assigned prompt to a variable to select which lottery the user wants to use.
-var flNums = floridaNumbers(); // Variable for the generated FL numbers.
-var pbNums = powerBallNumbers(); // Variable for the Power Ball Generated number.
 
 
 // Functions
 function lotteryType (lottery) { // Function for the Chosen Lottery
+    var pbNums = powerBallNumbers(); // Variable for the Power Ball Generated number.
+    var flNums = floridaNumbers(); // Variable for the generated FL numbers.
 
-    while (lottery === "Florida Lottery") { // While statement to run code when Florida Lottery is typed on the prompt.
+    if (lottery === "Florida Lottery") { // If statement to run code when Florida Lottery is typed on the prompt.
         console.log("Florida lottery numbers are: "+ flNums); // Assign to the console the random generated numbers for the FL lottery.
     }
 
-    while (lottery === "Power Ball") { // While statement to run this code if Power Ball is typed
+    if (lottery === "Power Ball"); { // Else statement to run this code if Power Ball is typed
         console.log ("Power Ball winning numbers are: " + pbNums); // Assigned to the console the random generated number for the Power ball Lottery
     }
 
-}
+    while (lottery === "") { // While loop to ensure user typed the chosen lottery type.
+        alert("Please choose a lottery type"); // Alert to inform user to type the lottery.
+        lottery = prompt("Please: Choose between:\nFlorida Lottery or Power Ball") // Promp after the alert for the user to re type the chosen lottery.
+    }
+
+
+        }
 
 
 
@@ -41,11 +47,6 @@ function powerBallNumbers () { // Random nunber function for the Power Ball.
     powerBall = Math.round (powerBall); // Round the final Power Ball number as an integer between 1 and 35.
     console.log(powerBallNums + "P" + powerBall); // Assigned to the conso the generated number.
 }
-
-
-
-
-
 
 
 
