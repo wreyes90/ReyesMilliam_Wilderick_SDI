@@ -4,11 +4,30 @@
 // Lottery Generator
 
 //variables
-//var chooseLottery = prompt ("Please: Choose between:\nFlorida Lottery or Power Ball"); // Assigned prompt to a variable to select which lottery the user wants to use.
+var chooseLottery = prompt ("Please: Choose between:\nFlorida Lottery or Power Ball"); // Assigned prompt to a variable to select which lottery the user wants to use.
 
 
 // Functions
+function lottery (lotteryType) {
+    while (lotteryType === ""){
+        alert("Please choose which lottery numbers you want");
+        lotteryType = prompt("Please: Choose between:\nFlorida Lottery or Power Ball");
+    }
 
+    if (lotteryType === "Florida Lottery") {
+        console.log ("The Florida Lottery wining numbers are: " + flRandom);
+    }
+}
+
+function lottery1 (lotteryType) {
+    if (lotteryType === "Power Ball") {
+        console.log ("The Power Ball winning numbers are: " + pbRandom + " Powerball "+ pbRandomFinal);
+    }
+}
+
+
+
+//Random numbers functions.
 function floridaNumbers (min, max, num) { // Random number for FL lottery function.
 
     var flArray = [];
@@ -28,7 +47,7 @@ function powerBallNumbers (min1, max1, num1) { // Random number function for the
         pbArray [b] = Math.round(powerBallNums); // Math object to round the number to an integer between 1 and 59 and assigning it to array.
 
     }
-    return pbArray // Returning the value to te array out of the function.
+    return pbArray; // Returning the value to te array out of the function.
 }
 
 function powerBallFinal (min2, max2, num2) { // Random number generator for the final Power Ball number.
@@ -37,16 +56,19 @@ function powerBallFinal (min2, max2, num2) { // Random number generator for the 
         var powerBall = Math.random() * (max2 - min2) + min2; // Assign value to the variable to receive the final Power Ball number between 1 and 35.
         pb1Array [c] = Math.round(powerBall); // Round the final Power Ball number as an integer between 1 and 35 and assigning it to array.
     }
-    return pb1Array // Returning the value to te array out of the function.
+    return pb1Array; // Returning the value to te array out of the function.
 }
 
 
 // Main code
 flRandom = floridaNumbers(1, 53, 6); // Summoned Florida numbers randomly generated numbers to the main code.
-console.log ("FL Lottery winers: " + flRandom); // Assigned to the console to test the results.
+//console.log ("FL Lottery winers: " + flRandom); // Assigned to the console to test the results.
 
 pbRandom = powerBallNumbers(1, 59, 5); // Called up to the main code the Power ball randomly generated numbers to the main code.
-console.log ("Power Ball numbers: " + pbRandom); // Assigned to the console to test the results.
+//console.log ("Power Ball numbers: " + pbRandom); // Assigned to the console to test the results.
 
 pbRandomFinal = powerBallFinal(1, 35, 1); // Called to main code the final Power Ball number.
-console.log ("Power Ball final number: " + pbRandomFinal); // Assigned to the console to test the results.
+//console.log ("Power Ball final number: " + pbRandomFinal); // Assigned to the console to test the results.
+
+lottery(chooseLottery);
+lottery1(chooseLottery);
