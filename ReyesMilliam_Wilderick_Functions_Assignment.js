@@ -32,7 +32,7 @@ function floridaNumbers (min, max, num) { // Random number for FL lottery functi
 
     var flArray = [];
     for (var a = 0; a < num; a++) { // For loop to generate the 6 FL lottery wining numbers to be used in the Array.
-        var floridaLottery = Math.random() * (max - min) + min; // Assign value to the variable to generate the random number between 1 and 52.
+        var floridaLottery =Math.floor ((Math.random() * (max - min) + min)); // Assign value to the variable to generate the random number between 1 and 52.
         flArray [a] = Math.round(floridaLottery); // Round the random number to receive an integer not a decimal between 1 and 52.
     }
     return flArray; // Returning the value to te array out of the function.
@@ -43,8 +43,8 @@ function powerBallNumbers (min1, max1, num1) { // Random number function for the
 
     var pbArray = [];
     for (var b = 0; b < num1; b++) { // For loop to generate the random first 5 numbers of the Power Ball to be used on the Array.
-        var powerBallNums = Math.random() * (max1 - min1) + min1; // Assign value to the variable to receive the first numbers between 1 and 59.
-        pbArray [b] = Math.round(powerBallNums); // Math object to round the number to an integer between 1 and 59 and assigning it to array.
+        var powerBallNums =Math.floor((Math.random() * (max1 - min1) + min1)); // Assign value to the variable to receive the first numbers between 1 and 59.
+        pbArray [b] =Math.round(powerBallNums); // Math object to round the number to an integer between 1 and 59 and assigning it to array.
 
     }
     return pbArray; // Returning the value to te array out of the function.
@@ -53,7 +53,7 @@ function powerBallNumbers (min1, max1, num1) { // Random number function for the
 function powerBallFinal (min2, max2, num2) { // Random number generator for the final Power Ball number.
     var pb1Array = [];
     for (var c = 0; c < num2; c++) { // For loop to generate the random numbers in array
-        var powerBall = Math.random() * (max2 - min2) + min2; // Assign value to the variable to receive the final Power Ball number between 1 and 35.
+        var powerBall =Math.random() * (max2 - min2) + min2; // Assign value to the variable to receive the final Power Ball number between 1 and 35.
         pb1Array [c] = Math.round(powerBall); // Round the final Power Ball number as an integer between 1 and 35 and assigning it to array.
     }
     return pb1Array; // Returning the value to te array out of the function.
