@@ -70,5 +70,5 @@ pbRandom = powerBallNumbers(1, 59, 5); // Called up to the main code the Power b
 pbRandomFinal = powerBallFinal(1, 35, 1); // Called to main code the final Power Ball number.
 //console.log ("Power Ball final number: " + pbRandomFinal); // Assigned to the console to test the results.
 
-lottery(chooseLottery); // Main code assignment to add the value of the lotteryType conditional.
-lottery1(chooseLottery); // Main code assignment to add the value of the lotteryType1 conditional.
+lottery(chooseLottery); // Main code assignment to add the value of the lotteryType Argument.
+lottery1(chooseLottery); // Main code assignment to add the value of the lotteryType1 Argument.
