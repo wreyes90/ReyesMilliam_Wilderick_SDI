@@ -8,20 +8,20 @@ var chooseLottery = prompt ("Please: Choose between:\nFlorida Lottery or Power B
 
 
 // Functions
-function lottery (lotteryType) {
-    while (lotteryType === ""){
-        alert("Please choose which lottery numbers you want");
-        lotteryType = prompt("Please: Choose between:\nFlorida Lottery or Power Ball");
+function lottery (lotteryType) { // Function for the FL Lottery portion of the code.
+    while (lotteryType === ""){ // While loop to ensure something was typed on the prompt
+        alert("Please choose which lottery numbers you want"); // Alert to indicate nothing was entered on the prompt.
+        lotteryType = prompt("Please: Choose between:\nFlorida Lottery or Power Ball"); // Promp again for the user to choose the lottery.
     }
 
-    if (lotteryType === "Florida Lottery") {
-        console.log ("The Florida Lottery wining numbers are: " + flRandom);
+    if (lotteryType === "Florida Lottery") { // If statement for the code to run once FL lottery is typed in the prompt.
+        console.log ("The Florida Lottery wining numbers are: " + flRandom); // Display on the console the random numbers for the FL lottery.
     }
 }
 
-function lottery1 (lotteryType) {
-    if (lotteryType === "Power Ball") {
-        console.log ("The Power Ball winning numbers are: " + pbRandom + " Powerball "+ pbRandomFinal);
+function lottery1 (lotteryType) { // Function for the Power Ball portion of the code.
+    if (lotteryType === "Power Ball") { // If statement to indicate the code to run if Power Ball is typed.
+        console.log ("The Power Ball winning numbers are: " + pbRandom + " Powerball "+ pbRandomFinal); // Display on the console the generated numbers for the Power Ball.
     }
 }
 
@@ -70,5 +70,5 @@ pbRandom = powerBallNumbers(1, 59, 5); // Called up to the main code the Power b
 pbRandomFinal = powerBallFinal(1, 35, 1); // Called to main code the final Power Ball number.
 //console.log ("Power Ball final number: " + pbRandomFinal); // Assigned to the console to test the results.
 
-lottery(chooseLottery);
-lottery1(chooseLottery);
+lottery(chooseLottery); // Main code assignment to add the value of the lotteryType conditional.
+lottery1(chooseLottery); // Main code assignment to add the value of the lotteryType1 conditional.
