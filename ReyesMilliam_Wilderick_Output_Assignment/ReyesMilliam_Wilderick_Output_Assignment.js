@@ -5,4 +5,5 @@
 // Declaring variables
 var jobPosition = "Bilingual Customer Service Representative";
 var yearsWorking = 3;
+console.log(jobPosition + yearsWorking);
 
