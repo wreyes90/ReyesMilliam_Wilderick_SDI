@@ -7,8 +7,9 @@ var tipPercentage; // Variable for the percentage of the tip to be used.
 var total;         // Variable for the total of the purchase without the tip.
 var totalWithTip;  // Variable to declare the total of the purchase with the tip included.
 var totalOfTip;    // Variable for the total amount of the tip based on the total of the purchase and the tip percentage.
-
+var name;
 // Use prompts to get user data.
+name          = prompt("Please enter your name");                         // Prompt to get the users name.
 total         = Number(prompt("Enter the total amount of the purchase")); // Prompt to get the users input of the total of the purchase.
 tipPercentage = Number(prompt("Enter the percentage of the tip"));        // Prompt to get the users input of the tip percentage.
 
@@ -17,4 +18,4 @@ totalOfTip   = total * (tipPercentage / 100);                             // Mat
 totalWithTip = total * ((tipPercentage / 100) + 1);                       // Mathematical expression to calclate the total of the purchase with tip included.
 
 // Assignment to the console.
-console.log("The total of the tip is $" + totalOfTip+"\nThe total of your purchase with tip included is $" + totalWithTip); // Console assignment of the calculations concatenated with strings.
+console.log("The total of the tip is $" + totalOfTip + "\nThe total of your purchase with tip included is $" + totalWithTip + "\n" + name + " Thanks for using Tip Calculator."); // Console assignment of the calculations and name concatenated with strings.
