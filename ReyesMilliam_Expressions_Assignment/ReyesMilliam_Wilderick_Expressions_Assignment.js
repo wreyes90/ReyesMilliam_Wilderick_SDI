@@ -4,6 +4,9 @@
 
 // Declaring Variables
 var tipPercentage;
-var ammount;
+var total;
 var totalWithTip;
 
+// Use prompts to get user data.
+total         = Number(prompt("Enter the total amount of the purchase"));
+tipPercentage = Number(promt("Enter the percentage of the tip"));
