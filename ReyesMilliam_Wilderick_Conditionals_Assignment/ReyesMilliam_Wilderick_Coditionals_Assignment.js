@@ -12,6 +12,16 @@ var moneyNeeded     = purchaseWithTax - myBalance;
 //Conditionals Assignment
 if (myBalance >= purchaseWithTax) {
     console.log("Your balance is $" + myBalance + " and the total of your purchase with taxes is $" + purchaseWithTax + " you can make the purchase.");
+
+    if (myBalance == ""){
+        alert("Account balance not provided \nPlease enter your account balance");
+    }
+    if (totalOfPurchase == ""){
+        alert("The total amount of the purchase not provided \nPlease enter the total amount of your purchase.");
+    }
+    if (salesTax == ""){
+        alert("The sales tax was not entered \nPlease enter the sales tax");
+    }
 } else {
     console.log("You do not have enough balance to make the purchase. You need $" + moneyNeeded + " to make the purchase.");
 }
