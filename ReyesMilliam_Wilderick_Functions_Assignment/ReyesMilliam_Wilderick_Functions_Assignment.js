@@ -3,43 +3,48 @@
 //Florida Lottery
 
 var chooseLottery = prompt("Please choose between:\nFlorida Lottery or Power Ball");
+var flLottery;
+var pbNums;
+var pbFinalNum;
 
 
-function lottery(lotteryType) {
+function lottery(lotteryType, flNumbers, pbNumbers, pbFinal) {
     var clicks = 1;
 
-    while (lotteryType === ""){
+    while (lotteryType === "") {
 
         lotteryType = prompt("Please make sure you chose between:\nFlorida Lottery or Power Ball");
 
         clicks ++;
 
-        if (clicks === 4){
+        if (clicks === 4) {
             console.log("Maximum number of attempts reached.\nPlease reload the page and try again.");
             break;
         }
-    }
-
-    if (lotteryType === "Florida Lottery" || "Florida lottery"){
 
     }
-
+     if (lotteryType === "Florida Lottery") {
+        console.log("The Florida Lottery winning numbers are:\n" + flNumbers );
+    }
+    
 }
 
-function lotteryNum (min, max, num){
+
+function lotteryNum (min, max, num) {
     var numArray = [];
 
-    for (var a = 0; 0 < num; a++) {
+    for (var a = 0; a < num; a++) {
 
-        var numbers = Math.random() * (max - min) + min;
+        var numbers  = Math.random() * (max - min) + min;
         numArray [a] = Math.round(numbers);
+
     }
     return numArray;
+
 }
 
 
-
-lotteryNum(1, 53, 6);
-lotteryNum(1, 59, 5);
-lotteryNum(1, 35, 1);
-lottery (chooseLottery);
+flLottery  = lotteryNum(1, 53, 6);
+pbNums     = lotteryNum(1, 59, 5);
+pbFinalNum = lotteryNum(1, 35, 1);
+chooseLottery = lottery(chooseLottery, flLottery, pbNums, pbFinalNum);
