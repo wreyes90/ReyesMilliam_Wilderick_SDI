@@ -26,7 +26,9 @@ function lottery(lotteryType, flNumbers, pbNumbers, pbFinal) {
      if (lotteryType === "Florida Lottery") {
         console.log("The Florida Lottery winning numbers are:\n" + flNumbers );
     }
-    
+    if (lotteryType === "Power Ball") {
+        console.log("The Power Ball winning numbers are:\n" + pbNumbers + " PB " + pbFinal);
+    }
 }
 
 
