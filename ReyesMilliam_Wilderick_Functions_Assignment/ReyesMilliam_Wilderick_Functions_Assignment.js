@@ -20,13 +20,26 @@ function lottery(lotteryType) {
         }
     }
 
-    
+    if (lotteryType === "Florida Lottery" || "Florida lottery"){
 
+    }
+
+}
+
+function lotteryNum (min, max, num){
+    var numArray = [];
+
+    for (var a = 0; 0 < num; a++) {
+
+        var numbers = Math.random() * (max - min) + min;
+        numArray [a] = Math.round(numbers);
+    }
+    return numArray;
 }
 
 
 
-
-
-
+lotteryNum(1, 53, 6);
+lotteryNum(1, 59, 5);
+lotteryNum(1, 35, 1);
 lottery (chooseLottery);
